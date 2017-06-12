@@ -147,6 +147,7 @@ public class GameActivity extends Activity {
 		round = 1;
 		x = 0;
 		y = 0;
+role = Double.parseDouble(getIntent().getStringExtra("role"));
 	}
 
 

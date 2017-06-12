@@ -16,71 +16,64 @@ import java.util.*;
 import java.text.*;
 
 
-public class MainActivity extends Activity {
+public class Toss2Activity extends Activity {
 
-	private LinearLayout linear1;
-	private ImageView imageview1;
-	private TextView textview1;
+	private LinearLayout linear3;
+	private Button button5;
+	private Button button6;
 
-
-
-	private Timer _timer = new Timer();
-	private TimerTask splashtime;
-	private Intent menu = new Intent();
+	private double role = 0;
+	private double r = 0;
 
 
+	private Intent main = new Intent();
 
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.main);
+		setContentView(R.layout.toss2);
 		initialize();
 		initializeLogic();
 	}
 
 	private void  initialize() {
-		linear1 = (LinearLayout) findViewById(R.id.linear1);
-		imageview1 = (ImageView) findViewById(R.id.imageview1);
-		textview1 = (TextView) findViewById(R.id.textview1);
+		linear3 = (LinearLayout) findViewById(R.id.linear3);
+		button5 = (Button) findViewById(R.id.button5);
+		button6 = (Button) findViewById(R.id.button6);
 
 
 
-
-		imageview1.setOnClickListener(new View.OnClickListener() {
+		button5.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View _v) { 
-
+				role = 1;
+				_next();
+			}
+		});
+		button6.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View _v) { 
+				role = 2;
+				_next();
 			}
 		});
 
 	}
 
 	private void  initializeLogic() {
-		splashtime = new TimerTask() {
-					@Override
-						public void run() {
-							runOnUiThread(new Runnable() {
-							@Override
-								public void run() {
 
-
-
-menu.setClass(getApplicationContext(), MenuActivity.class);
-								menu.setAction(Intent.ACTION_VIEW);
-								startActivity(menu);
-								finish();
-				
-
-										
-								}
-							});
-						}
-					};
-					_timer.schedule(splashtime, (int)(1500));
 	}
 
 
+	private void _next () {
+		r = role;
+		main.setAction(Intent.ACTION_VIEW);
+		main.setClass(getApplicationContext(), GameActivity.class);
+		main.putExtra("role", String.valueOf((long)(r)));
+		startActivity(main);
+		finish();
+	}
 
 
 	// created automatically

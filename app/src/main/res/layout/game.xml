@@ -76,14 +76,17 @@
 			android:layout_height="wrap_content"
 			android:padding="8dp"
 			android:orientation="horizontal"
+android:gravity="center_horizontal"
 			>
 			<Button
 				android:id="@+id/button1"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:padding="8dp"
-				android:text="1"
+android:layout_margin="3dp"
+android:text="1"
 				android:textSize="12sp"
+android:background="#4FC3F7"
 				android:textColor="#000000"
 				/>
 			<Button
@@ -93,7 +96,9 @@
 				android:padding="8dp"
 				android:text="2"
 				android:textSize="12sp"
+android:background="#4FC3F7"
 				android:textColor="#000000"
+android:layout_margin="3dp"
 				/>
 			<Button
 				android:id="@+id/button3"
@@ -101,8 +106,10 @@
 				android:layout_height="wrap_content"
 				android:padding="8dp"
 				android:text="3"
+android:background="#4FC3F7"
 				android:textSize="12sp"
 				android:textColor="#000000"
+android:layout_margin="3dp"
 				/>
 		</LinearLayout>
 		<LinearLayout
@@ -110,6 +117,8 @@
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
 			android:padding="8dp"
+
+android:gravity="center_horizontal"
 			android:orientation="horizontal"
 			>
 			<Button
@@ -119,7 +128,9 @@
 				android:padding="8dp"
 				android:text="4"
 				android:textSize="12sp"
+android:background="#4FC3F7"
 				android:textColor="#000000"
+android:layout_margin="3dp"
 				/>
 			<Button
 				android:id="@+id/button5"
@@ -128,7 +139,9 @@
 				android:padding="8dp"
 				android:text="5"
 				android:textSize="12sp"
+android:background="#4FC3F7"
 				android:textColor="#000000"
+android:layout_margin="3dp"
 				/>
 			<Button
 				android:id="@+id/button6"
@@ -137,7 +150,9 @@
 				android:padding="8dp"
 				android:text="6"
 				android:textSize="12sp"
+android:background="#4FC3F7"
 				android:textColor="#000000"
+android:layout_margin="3dp"
 				/>
 		</LinearLayout>
 	</LinearLayout>
